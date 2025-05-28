@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .toggle-label {
+            transition: color 0.3s;
+        }
+        .toggle-label.active {
+            color: #1D4ED8; /* Tailwind's blue-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">YourCompany</div>
+            <nav class="space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Features</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Pricing</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800">Choose Your Plan</h1>
+            <p class="text-gray-600 mt-4">Select the best plan that fits your needs.</p>
+        </section>
+
+        <div class="flex justify-center mb-12">
+            <div class="flex items-center">
+                <span id="monthly-label" class="text-gray-600 mr-2 toggle-label active">Monthly</span>
+                <label for="toggle" class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="toggle" class="sr-only" onchange="togglePlans()">
+                    <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600"></div>
+                    <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition peer-checked:translate-x-full"></div>
+                </label>
+                <span id="yearly-label" class="text-gray-600 ml-2 toggle-label">Yearly</span>
+            </div>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-lg rounded-2xl p-6">
+                <h2 class="text-2xl font-bold text-gray-800">Basic</h2>
+                <p class="text-gray-600 mt-4">Perfect for individuals</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold text-gray-800" id="basic-price">$10</span>
+                    <span class="text-gray-600">/month</span>
+                </div>
+                <ul class="mt-6 space-y-4">
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 1
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 2
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 3
+                    </li>
+                </ul>
+                <button class="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Choose Plan</button>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-2xl p-6">
+                <h2 class="text-2xl font-bold text-gray-800">Standard</h2>
+                <p class="text-gray-600 mt-4">Ideal for small teams</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold text-gray-800" id="standard-price">$30</span>
+                    <span class="text-gray-600">/month</span>
+                </div>
+                <ul class="mt-6 space-y-4">
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 1
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 2
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 3
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 4
+                    </li>
+                </ul>
+                <button class="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Choose Plan</button>
+            </div>
+
+            <div class="bg-white shadow-lg rounded-2xl p-6">
+                <h2 class="text-2xl font-bold text-gray-800">Premium</h2>
+                <p class="text-gray-600 mt-4">Best for large organizations</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold text-gray-800" id="premium-price">$50</span>
+                    <span class="text-gray-600">/month</span>
+                </div>
+                <ul class="mt-6 space-y-4">
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 1
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 2
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 3
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 4
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i> Feature 5
+                    </li>
+                </ul>
+                <button class="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105">Choose Plan</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white shadow mt-12">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-gray-600">&copy; 2023 YourCompany. All rights reserved.</div>
+            <div class="space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function togglePlans() {
+            const isChecked = document.getElementById('toggle').checked;
+            document.getElementById('basic-price').textContent = isChecked ? '$100' : '$10';
+            document.getElementById('standard-price').textContent = isChecked ? '$300' : '$30';
+            document.getElementById('premium-price').textContent = isChecked ? '$500' : '$50';
+
+            document.getElementById('monthly-label').classList.toggle('active', !isChecked);
+            document.getElementById('yearly-label').classList.toggle('active', isChecked);
+        }
+    </script>
+</body>
+</html>

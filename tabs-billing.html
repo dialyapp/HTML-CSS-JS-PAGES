@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>Tabbed Section with Payment Options</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <script>
+        function updatePayButton(tabId) {
+            const selectElement = document.querySelector(`#${tabId} select`);
+            const payButton = document.querySelector(`#${tabId} .pay-button`);
+            payButton.textContent = `Pay $${selectElement.value}`;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+            <ul class="flex border-b">
+                <li class="-mb-px mr-1">
+                    <a class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="#tab1">Tab 1</a>
+                </li>
+                <li class="mr-1">
+                    <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#tab2">Tab 2</a>
+                </li>
+                <li class="mr-1">
+                    <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#tab3">Tab 3</a>
+                </li>
+            </ul>
+        </div>
+        <div id="tab1" class="tab-content">
+            <div class="mb-4">
+                <label for="textbox1" class="block text-gray-700">Text Box 1</label>
+                <input type="text" id="textbox1" class="w-full px-3 py-2 border rounded-lg" placeholder="Enter text here">
+            </div>
+            <div class="mb-4">
+                <label for="select1" class="block text-gray-700">Select Amount</label>
+                <select id="select1" class="w-full px-3 py-2 border rounded-lg" onchange="updatePayButton('tab1')">
+                    <option value="5">5$</option>
+                    <option value="10">10$</option>
+                    <option value="20">20$</option>
+                </select>
+            </div>
+            <button class="pay-button bg-blue-500 text-white px-4 py-2 rounded-lg">Pay $5</button>
+        </div>
+        <div id="tab2" class="tab-content hidden">
+            <div class="mb-4">
+                <label for="textbox2" class="block text-gray-700">Text Box 2</label>
+                <input type="text" id="textbox2" class="w-full px-3 py-2 border rounded-lg" placeholder="Enter text here">
+            </div>
+            <div class="mb-4">
+                <label for="select2" class="block text-gray-700">Select Amount</label>
+                <select id="select2" class="w-full px-3 py-2 border rounded-lg" onchange="updatePayButton('tab2')">
+                    <option value="5">5$</option>
+                    <option value="10">10$</option>
+                    <option value="20">20$</option>
+                </select>
+            </div>
+            <button class="pay-button bg-blue-500 text-white px-4 py-2 rounded-lg">Pay $5</button>
+        </div>
+        <div id="tab3" class="tab-content hidden">
+            <div class="mb-4">
+                <label for="textbox3" class="block text-gray-700">Text Box 3</label>
+                <input type="text" id="textbox3" class="w-full px-3 py-2 border rounded-lg" placeholder="Enter text here">
+            </div>
+            <div class="mb-4">
+                <label for="select3" class="block text-gray-700">Select Amount</label>
+                <select id="select3" class="w-full px-3 py-2 border rounded-lg" onchange="updatePayButton('tab3')">
+                    <option value="5">5$</option>
+                    <option value="10">10$</option>
+                    <option value="20">20$</option>
+                </select>
+            </div>
+            <button class="pay-button bg-blue-500 text-white px-4 py-2 rounded-lg">Pay $5</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+        document.querySelector('#tab1').classList.remove('hidden');
+
+        document.querySelectorAll('ul li a').forEach(tabLink => {
+            tabLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+                document.querySelectorAll('ul li a').forEach(link => link.classList.remove('border-l', 'border-t', 'border-r', 'rounded-t', 'text-blue-700'));
+                this.classList.add('border-l', 'border-t', 'border-r', 'rounded-t', 'text-blue-700');
+                document.querySelector(this.getAttribute('href')).classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

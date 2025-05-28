@@ -1,0 +1,351 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Classter-like Website
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .mobile-menu {
+    display: none;
+   }
+   @media (max-width: 768px) {
+    .mobile-menu {
+     display: block;
+    }
+    .desktop-menu {
+     display: none;
+    }
+   }
+  </style>
+ </head>
+ <body class="font-roboto">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white">
+   <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <div class="flex items-center">
+     <img alt="Company logo with a modern design and blue color scheme" class="h-12" height="50" src="https://storage.googleapis.com/a1aa/image/2C0XRuvSeVRIDKYBfw8eD6iEcknYrarCHgLODP6VxjmpHr9nA.jpg" width="150"/>
+     <nav class="ml-10 space-x-4 desktop-menu">
+      <a class="hover:text-gray-300" href="#">
+       Home
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       Features
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       Pricing
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       About
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       Contact
+      </a>
+     </nav>
+    </div>
+    <div class="flex items-center">
+     <select class="bg-blue-600 text-white border-none mr-4">
+      <option>
+       EN
+      </option>
+      <option>
+       FR
+      </option>
+      <option>
+       ES
+      </option>
+     </select>
+     <button class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200">
+      Login
+     </button>
+     <button class="ml-4 mobile-menu" id="mobile-menu-button">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+    </div>
+   </div>
+   <div class="mobile-menu hidden" id="mobile-menu">
+    <nav class="bg-blue-600 text-white px-6 py-4">
+     <a class="block py-2 hover:text-gray-300" href="#">
+      Home
+     </a>
+     <a class="block py-2 hover:text-gray-300" href="#">
+      Features
+     </a>
+     <a class="block py-2 hover:text-gray-300" href="#">
+      Pricing
+     </a>
+     <a class="block py-2 hover:text-gray-300" href="#">
+      About
+     </a>
+     <a class="block py-2 hover:text-gray-300" href="#">
+      Contact
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-20">
+   <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+    <div class="md:w-1/2">
+     <h1 class="text-4xl font-bold mb-4">
+      Welcome to Our Platform
+     </h1>
+     <p class="text-lg mb-6">
+      A comprehensive solution for managing your educational institution efficiently and effectively.
+     </p>
+     <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+      Get Started
+     </button>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0">
+     <img alt="Illustration of a modern educational platform interface with various features" class="w-full" height="400" src="https://storage.googleapis.com/a1aa/image/gLxTcWlg9noGIBB8W4J9d65XQctx2VqvpeX8Xx5KFOX5xafTA.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Features Section -->
+  <section class="py-20">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Features
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded shadow">
+      <img alt="Icon representing user management feature" class="mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/MX7AjYayPVpgGJTY83w8eEpgY9nnSOrNeRgdeeggUo3feYtfJA.jpg" width="100"/>
+      <h3 class="text-xl font-bold mb-2 text-center">
+       User Management
+      </h3>
+      <p class="text-center">
+       Easily manage students, teachers, and staff with our intuitive user management system.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded shadow">
+      <img alt="Icon representing scheduling feature" class="mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/kBxe630icZWLIqLExYlykmz3T2uiEwHkFedoe1Ku9selPW7PB.jpg" width="100"/>
+      <h3 class="text-xl font-bold mb-2 text-center">
+       Scheduling
+      </h3>
+      <p class="text-center">
+       Create and manage schedules effortlessly with our powerful scheduling tools.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded shadow">
+      <img alt="Icon representing communication feature" class="mb-4 mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/flFWc5OMQDR0f0RCGE7Kxk15McKIDhfBRejl6jefN1pM8YtfJA.jpg" width="100"/>
+      <h3 class="text-xl font-bold mb-2 text-center">
+       Communication
+      </h3>
+      <p class="text-center">
+       Enhance communication between students, teachers, and parents with our integrated messaging system.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Pricing Section -->
+  <section class="bg-gray-100 py-20">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Pricing
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="bg-white p-6 rounded shadow">
+      <h3 class="text-xl font-bold mb-4 text-center">
+       Basic
+      </h3>
+      <p class="text-center text-2xl font-bold mb-4">
+       $10/month
+      </p>
+      <ul class="mb-6">
+       <li class="mb-2 text-center">
+        Feature 1
+       </li>
+       <li class="mb-2 text-center">
+        Feature 2
+       </li>
+       <li class="mb-2 text-center">
+        Feature 3
+       </li>
+      </ul>
+      <button class="bg-blue-600 text-white px-6 py-3 rounded w-full hover:bg-blue-700">
+       Choose Plan
+      </button>
+     </div>
+     <div class="bg-white p-6 rounded shadow">
+      <h3 class="text-xl font-bold mb-4 text-center">
+       Standard
+      </h3>
+      <p class="text-center text-2xl font-bold mb-4">
+       $20/month
+      </p>
+      <ul class="mb-6">
+       <li class="mb-2 text-center">
+        Feature 1
+       </li>
+       <li class="mb-2 text-center">
+        Feature 2
+       </li>
+       <li class="mb-2 text-center">
+        Feature 3
+       </li>
+       <li class="mb-2 text-center">
+        Feature 4
+       </li>
+      </ul>
+      <button class="bg-blue-600 text-white px-6 py-3 rounded w-full hover:bg-blue-700">
+       Choose Plan
+      </button>
+     </div>
+     <div class="bg-white p-6 rounded shadow">
+      <h3 class="text-xl font-bold mb-4 text-center">
+       Premium
+      </h3>
+      <p class="text-center text-2xl font-bold mb-4">
+       $30/month
+      </p>
+      <ul class="mb-6">
+       <li class="mb-2 text-center">
+        Feature 1
+       </li>
+       <li class="mb-2 text-center">
+        Feature 2
+       </li>
+       <li class="mb-2 text-center">
+        Feature 3
+       </li>
+       <li class="mb-2 text-center">
+        Feature 4
+       </li>
+       <li class="mb-2 text-center">
+        Feature 5
+       </li>
+      </ul>
+      <button class="bg-blue-600 text-white px-6 py-3 rounded w-full hover:bg-blue-700">
+       Choose Plan
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- About Section -->
+  <section class="py-20">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     About Us
+    </h2>
+    <div class="flex flex-col md:flex-row items-center">
+     <div class="md:w-1/2">
+      <img alt="Team of professionals working together in a modern office environment" class="w-full rounded" height="400" src="https://storage.googleapis.com/a1aa/image/3DtYZMFxjPYeJil5onMGfUfEWiwp8qga5IF6SLfDkOXXPW7PB.jpg" width="600"/>
+     </div>
+     <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
+      <p class="text-lg mb-6">
+       We are a team of dedicated professionals committed to providing the best solutions for educational institutions. Our platform is designed to streamline administrative tasks and enhance the learning experience for students and teachers alike.
+      </p>
+      <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+       Learn More
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="bg-gray-100 py-20">
+   <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Contact Us
+    </h2>
+    <div class="flex flex-col md:flex-row items-center">
+     <div class="md:w-1/2">
+      <form>
+       <div class="mb-4">
+        <label class="block text-gray-700" for="name">
+         Name
+        </label>
+        <input class="w-full px-4 py-2 border rounded" id="name" placeholder="Your Name" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700" for="email">
+         Email
+        </label>
+        <input class="w-full px-4 py-2 border rounded" id="email" placeholder="Your Email" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700" for="message">
+         Message
+        </label>
+        <textarea class="w-full px-4 py-2 border rounded" id="message" placeholder="Your Message" rows="4">
+        </textarea>
+       </div>
+       <button class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700" type="submit">
+        Send Message
+       </button>
+      </form>
+     </div>
+     <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
+      <h3 class="text-xl font-bold mb-4">
+       Get in Touch
+      </h3>
+      <p class="mb-4">
+       Feel free to reach out to us with any questions or inquiries. We are here to help you and provide the best support possible.
+      </p>
+      <p class="mb-2">
+       <i class="fas fa-phone-alt mr-2">
+       </i>
+       +1 234 567 890
+      </p>
+      <p class="mb-2">
+       <i class="fas fa-envelope mr-2">
+       </i>
+       support@example.com
+      </p>
+      <p class="mb-2">
+       <i class="fas fa-map-marker-alt mr-2">
+       </i>
+       1234 Street Name, City, Country
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-6">
+   <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+     <p class="text-center md:text-left mb-4 md:mb-0">
+      © 2023 Your Company. All rights reserved.
+     </p>
+     <div class="flex space-x-4">
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+      <a class="hover:text-gray-300" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('hidden')) {
+     menu.classList.remove('hidden');
+    } else {
+     menu.classList.add('hidden');
+    }
+   });
+  </script>
+ </body>
+</html>

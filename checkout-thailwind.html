@@ -1,0 +1,371 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Checkout Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+     <div class="flex items-center space-x-3">
+      <img alt="Company logo, stylized letter C in blue and white" class="h-12 w-12" height="48" src="https://storage.googleapis.com/a1aa/image/e662fe3d-1442-4f61-7933-495a06ddcbef.jpg" width="48"/>
+      <h1 class="text-2xl font-semibold text-gray-900">
+       Checkout
+      </h1>
+     </div>
+    </div>
+   </div>
+  </header>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <form action="#" class="space-y-12" method="POST" novalidate="">
+    <!-- Shipping Address -->
+    <section aria-labelledby="shipping-address-heading">
+     <h2 class="text-xl font-semibold text-gray-900 mb-6" id="shipping-address-heading">
+      Shipping Address
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-first-name">
+        First name
+       </label>
+       <input autocomplete="given-name" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-first-name" name="shipping-first-name" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-last-name">
+        Last name
+       </label>
+       <input autocomplete="family-name" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-last-name" name="shipping-last-name" required="" type="text"/>
+      </div>
+      <div class="sm:col-span-2">
+       <label class="block text-sm font-medium text-gray-700" for="shipping-address-line1">
+        Address line 1
+       </label>
+       <input autocomplete="address-line1" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-address-line1" name="shipping-address-line1" required="" type="text"/>
+      </div>
+      <div class="sm:col-span-2">
+       <label class="block text-sm font-medium text-gray-700" for="shipping-address-line2">
+        Address line 2
+        <span class="text-gray-400">
+         (Optional)
+        </span>
+       </label>
+       <input autocomplete="address-line2" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-address-line2" name="shipping-address-line2" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-city">
+        City
+       </label>
+       <input autocomplete="address-level2" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-city" name="shipping-city" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-state">
+        State / Province
+       </label>
+       <input autocomplete="address-level1" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-state" name="shipping-state" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-zip">
+        ZIP / Postal code
+       </label>
+       <input autocomplete="postal-code" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-zip" name="shipping-zip" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="shipping-country">
+        Country
+       </label>
+       <select autocomplete="country-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="shipping-country" name="shipping-country" required="">
+        <option value="">
+         Select a country
+        </option>
+        <option>
+         United States
+        </option>
+        <option>
+         Canada
+        </option>
+        <option>
+         United Kingdom
+        </option>
+        <option>
+         Australia
+        </option>
+        <option>
+         Germany
+        </option>
+        <option>
+         France
+        </option>
+        <option>
+         Japan
+        </option>
+        <option>
+         China
+        </option>
+        <option>
+         India
+        </option>
+        <option>
+         Brazil
+        </option>
+       </select>
+      </div>
+      <div class="sm:col-span-2 flex items-center space-x-2">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="billing-same-as-shipping" name="billing-same-as-shipping" type="checkbox"/>
+       <label class="block text-sm text-gray-700" for="billing-same-as-shipping">
+        Billing address is the same as shipping address
+       </label>
+      </div>
+     </div>
+    </section>
+    <!-- Billing Address -->
+    <section aria-labelledby="billing-address-heading" class="hidden" id="billing-address-section">
+     <h2 class="text-xl font-semibold text-gray-900 mb-6" id="billing-address-heading">
+      Billing Address
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6">
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-first-name">
+        First name
+       </label>
+       <input autocomplete="given-name" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-first-name" name="billing-first-name" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-last-name">
+        Last name
+       </label>
+       <input autocomplete="family-name" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-last-name" name="billing-last-name" type="text"/>
+      </div>
+      <div class="sm:col-span-2">
+       <label class="block text-sm font-medium text-gray-700" for="billing-address-line1">
+        Address line 1
+       </label>
+       <input autocomplete="address-line1" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-address-line1" name="billing-address-line1" type="text"/>
+      </div>
+      <div class="sm:col-span-2">
+       <label class="block text-sm font-medium text-gray-700" for="billing-address-line2">
+        Address line 2
+        <span class="text-gray-400">
+         (Optional)
+        </span>
+       </label>
+       <input autocomplete="address-line2" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-address-line2" name="billing-address-line2" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-city">
+        City
+       </label>
+       <input autocomplete="address-level2" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-city" name="billing-city" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-state">
+        State / Province
+       </label>
+       <input autocomplete="address-level1" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-state" name="billing-state" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-zip">
+        ZIP / Postal code
+       </label>
+       <input autocomplete="postal-code" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-zip" name="billing-zip" type="text"/>
+      </div>
+      <div>
+       <label class="block text-sm font-medium text-gray-700" for="billing-country">
+        Country
+       </label>
+       <select autocomplete="country-name" class="mt-1 block w-full rounded-md border border-gray-300 bg-white shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="billing-country" name="billing-country">
+        <option value="">
+         Select a country
+        </option>
+        <option>
+         United States
+        </option>
+        <option>
+         Canada
+        </option>
+        <option>
+         United Kingdom
+        </option>
+        <option>
+         Australia
+        </option>
+        <option>
+         Germany
+        </option>
+        <option>
+         France
+        </option>
+        <option>
+         Japan
+        </option>
+        <option>
+         China
+        </option>
+        <option>
+         India
+        </option>
+        <option>
+         Brazil
+        </option>
+       </select>
+      </div>
+     </div>
+    </section>
+    <!-- Shipping Methods -->
+    <section aria-labelledby="shipping-method-heading">
+     <h2 class="text-xl font-semibold text-gray-900 mb-6" id="shipping-method-heading">
+      Shipping Method
+     </h2>
+     <fieldset class="space-y-4">
+      <legend class="sr-only">
+       Shipping options
+      </legend>
+      <div class="flex items-center">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="shipping-standard" name="shipping-method" type="radio" value="standard"/>
+       <label class="ml-3 block text-sm font-medium text-gray-700" for="shipping-standard">
+        Standard Shipping (5-7 business days) - $5.00
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="shipping-expedited" name="shipping-method" type="radio" value="expedited"/>
+       <label class="ml-3 block text-sm font-medium text-gray-700" for="shipping-expedited">
+        Expedited Shipping (2-3 business days) - $15.00
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="shipping-next-day" name="shipping-method" type="radio" value="next-day"/>
+       <label class="ml-3 block text-sm font-medium text-gray-700" for="shipping-next-day">
+        Next Day Shipping (1 business day) - $25.00
+       </label>
+      </div>
+     </fieldset>
+    </section>
+    <!-- Payment Methods -->
+    <section aria-labelledby="payment-method-heading">
+     <h2 class="text-xl font-semibold text-gray-900 mb-6" id="payment-method-heading">
+      Payment Method
+     </h2>
+     <fieldset class="space-y-6">
+      <legend class="sr-only">
+       Payment options
+      </legend>
+      <!-- Credit Card -->
+      <div>
+       <div class="flex items-center">
+        <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="payment-credit-card" name="payment-method" type="radio" value="credit-card"/>
+        <label class="ml-3 block text-sm font-medium text-gray-700" for="payment-credit-card">
+         Credit / Debit Card
+        </label>
+       </div>
+       <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 max-w-md">
+        <div class="sm:col-span-2">
+         <label class="block text-sm font-medium text-gray-700" for="card-name">
+          Name on card
+         </label>
+         <input autocomplete="cc-name" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="card-name" name="card-name" required="" type="text"/>
+        </div>
+        <div class="sm:col-span-2">
+         <label class="block text-sm font-medium text-gray-700" for="card-number">
+          Card number
+         </label>
+         <input autocomplete="cc-number" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="card-number" inputmode="numeric" maxlength="19" name="card-number" pattern="[0-9\s]{13,19}" placeholder="1234 5678 9012 3456" required="" type="text"/>
+        </div>
+        <div>
+         <label class="block text-sm font-medium text-gray-700" for="card-expiration">
+          Expiration date
+         </label>
+         <input autocomplete="cc-exp" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="card-expiration" name="card-expiration" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" placeholder="MM/YY" required="" type="text"/>
+        </div>
+        <div>
+         <label class="block text-sm font-medium text-gray-700" for="card-cvc">
+          CVC
+         </label>
+         <input autocomplete="cc-csc" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-50" id="card-cvc" inputmode="numeric" maxlength="4" name="card-cvc" pattern="[0-9]{3,4}" placeholder="123" required="" type="text"/>
+        </div>
+       </div>
+      </div>
+      <!-- PayPal -->
+      <div>
+       <div class="flex items-center">
+        <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="payment-paypal" name="payment-method" type="radio" value="paypal"/>
+        <label class="ml-3 block text-sm font-medium text-gray-700" for="payment-paypal">
+         PayPal
+        </label>
+       </div>
+       <div class="mt-4 max-w-md text-gray-600 text-sm" hidden="" id="paypal-info">
+        After clicking "Place Order", you will be redirected to PayPal to
+              complete your purchase securely.
+       </div>
+      </div>
+      <!-- Apple Pay -->
+      <div>
+       <div class="flex items-center">
+        <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300" id="payment-apple-pay" name="payment-method" type="radio" value="apple-pay"/>
+        <label class="ml-3 block text-sm font-medium text-gray-700" for="payment-apple-pay">
+         Apple Pay
+        </label>
+       </div>
+       <div class="mt-4 max-w-md text-gray-600 text-sm" hidden="" id="apple-pay-info">
+        You will be prompted to complete your purchase using Apple Pay.
+       </div>
+      </div>
+     </fieldset>
+    </section>
+    <div class="pt-6 border-t border-gray-200">
+     <button class="w-full inline-flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-lg font-semibold" type="submit">
+      Place Order
+     </button>
+    </div>
+   </form>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+    © 2024 Your Company, Inc. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   const billingCheckbox = document.getElementById('billing-same-as-shipping');
+    const billingSection = document.getElementById('billing-address-section');
+
+    billingCheckbox.addEventListener('change', () => {
+      if (billingCheckbox.checked) {
+        billingSection.classList.add('hidden');
+        // Clear billing inputs when hidden
+        billingSection.querySelectorAll('input, select').forEach((el) => {
+          el.value = '';
+        });
+      } else {
+        billingSection.classList.remove('hidden');
+      }
+    });
+
+    // Payment method info toggling
+    const paymentRadios = document.querySelectorAll('input[name="payment-method"]');
+    const paypalInfo = document.getElementById('paypal-info');
+    const applePayInfo = document.getElementById('apple-pay-info');
+
+    function updatePaymentInfo() {
+      const selected = document.querySelector('input[name="payment-method"]:checked').value;
+      paypalInfo.hidden = selected !== 'paypal';
+      applePayInfo.hidden = selected !== 'apple-pay';
+    }
+
+    paymentRadios.forEach((radio) => {
+      radio.addEventListener('change', updatePaymentInfo);
+    });
+
+    updatePaymentInfo();
+  </script>
+ </body>
+</html>

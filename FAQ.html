@@ -1,0 +1,121 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Questions Fréquemment Posées</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .faq-content {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-roboto">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">FAQ - Questions Fréquemment Posées</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Accueil</a></li>
+                    <li><a href="#" class="hover:underline">À propos</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Questions Fréquemment Posées</h2>
+            <div class="space-y-4">
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 1: Comment puis-je m'inscrire?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour vous inscrire, cliquez sur le bouton "S'inscrire" en haut à droite de la page d'accueil et remplissez le formulaire d'inscription. Classter est un système de gestion des étudiants et de l’apprentissage de bout en bout pour toute organisation qui offre des services d’éducation ou de formation. Il vous aidera à gérer vos processus et à numériser votre école afin d’économiser du temps et de l’argent. Avec Classter, vous pouvez vous débarrasser de votre infrastructure informatique fragmentée. C’est parce que Classter combine les fonctionnalités de 5 types de solutions différentes : SIS, SMS, LMS, ERP et CRM en 12 modules.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 2: Comment puis-je réinitialiser mon mot de passe?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour réinitialiser votre mot de passe, cliquez sur "Mot de passe oublié" sur la page de connexion et suivez les instructions.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 3: Comment puis-je contacter le support?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Vous pouvez contacter le support en envoyant un email à support@example.com ou en appelant le 123-456-7890.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 4: Où puis-je trouver les conditions d'utilisation?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Les conditions d'utilisation sont disponibles en bas de chaque page sous le lien "Conditions d'utilisation".</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 5: Comment puis-je supprimer mon compte?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour supprimer votre compte, veuillez contacter le support à support@example.com avec votre demande.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 6: Comment puis-je mettre à jour mes informations personnelles?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour mettre à jour vos informations personnelles, allez dans "Mon compte" et modifiez les informations nécessaires.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 7: Comment puis-je ajouter un nouveau produit?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour ajouter un nouveau produit, allez dans la section "Produits" et cliquez sur "Ajouter un produit".</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 8: Comment puis-je suivre ma commande?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour suivre votre commande, allez dans "Mes commandes" et cliquez sur "Suivre ma commande".</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 9: Comment puis-je annuler ma commande?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour annuler votre commande, contactez le support à support@example.com avec votre numéro de commande.</p>
+                    </div>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-lg font-semibold cursor-pointer" onclick="toggleFaq(this)">Question 10: Comment puis-je laisser un avis?</h3>
+                    <div class="faq-content mt-2">
+                        <p>Pour laisser un avis, allez sur la page du produit et cliquez sur "Laisser un avis".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 FAQ - Questions Fréquemment Posées. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            const content = element.nextElementSibling;
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                content.style.maxHeight = null;
+            } else {
+                content.classList.add('show');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>

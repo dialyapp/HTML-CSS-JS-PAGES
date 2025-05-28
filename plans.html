@@ -1,0 +1,247 @@
+<html>
+<head>
+    <title>Pricing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .pricing-header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .pricing-header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .toggle-switch {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+        .toggle-switch label {
+            background-color: #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 20px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+        .toggle-switch label:before {
+            content: 'Monthly';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .toggle-switch label:after {
+            content: 'Annually';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .toggle-switch input[type="checkbox"]:checked + label {
+            background-color: #4CAF50;
+        }
+        .toggle-switch input[type="checkbox"]:checked + label:before {
+            content: 'Annually';
+            left: 10px;
+        }
+        .toggle-switch input[type="checkbox"]:checked + label:after {
+            content: 'Monthly';
+            right: 10px;
+        }
+        .pricing-plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .plan {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+        .plan h2 {
+            font-size: 1.8em;
+            margin: 0 0 20px;
+        }
+        .plan .price {
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        .plan .price span {
+            font-size: 0.5em;
+            color: #666;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .plan ul li {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .plan button {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .plan button:hover {
+            background-color: #45a049;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pricing-header">
+            <h1>Our Pricing Plans</h1>
+            <p>Choose the plan that suits you best</p>
+        </div>
+        <div class="toggle-switch">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+        </div>
+        <div class="pricing-plans">
+            <div class="plan" data-plan="Silver Plan" data-price-monthly="$19.99/month" data-price-annually="$199.99/year" data-features="10 GB Storage, 100 GB Bandwidth, 24/7 Support, Basic Analytics">
+                <h2>Silver Plan</h2>
+                <div class="price" id="silver-price">$19.99<span>/month</span></div>
+                <ul>
+                    <li>10 GB Storage</li>
+                    <li>100 GB Bandwidth</li>
+                    <li>24/7 Support</li>
+                    <li>Basic Analytics</li>
+                </ul>
+                <button class="choose-plan">Choose Plan</button>
+            </div>
+            <div class="plan" data-plan="Gold Plan" data-price-monthly="$49.99/month" data-price-annually="$499.99/year" data-features="50 GB Storage, 500 GB Bandwidth, Priority Support, Advanced Analytics">
+                <h2>Gold Plan</h2>
+                <div class="price" id="gold-price">$49.99<span>/month</span></div>
+                <ul>
+                    <li>50 GB Storage</li>
+                    <li>500 GB Bandwidth</li>
+                    <li>Priority Support</li>
+                    <li>Advanced Analytics</li>
+                </ul>
+                <button class="choose-plan">Choose Plan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="planModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-plan-name"></h2>
+            <div class="price" id="modal-plan-price"></div>
+            <ul id="modal-plan-features"></ul>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const silverPrice = document.getElementById('silver-price');
+        const goldPrice = document.getElementById('gold-price');
+        const modal = document.getElementById('planModal');
+        const closeModal = document.getElementsByClassName('close')[0];
+        const modalPlanName = document.getElementById('modal-plan-name');
+        const modalPlanPrice = document.getElementById('modal-plan-price');
+        const modalPlanFeatures = document.getElementById('modal-plan-features');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                silverPrice.innerHTML = '$199.99<span>/year</span>';
+                goldPrice.innerHTML = '$499.99<span>/year</span>';
+            } else {
+                silverPrice.innerHTML = '$19.99<span>/month</span>';
+                goldPrice.innerHTML = '$49.99<span>/month</span>';
+            }
+        });
+
+        document.querySelectorAll('.choose-plan').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const plan = e.target.closest('.plan');
+                const planName = plan.getAttribute('data-plan');
+                const planPrice = toggle.checked ? plan.getAttribute('data-price-annually') : plan.getAttribute('data-price-monthly');
+                const planFeatures = plan.getAttribute('data-features').split(', ');
+
+                modalPlanName.textContent = planName;
+                modalPlanPrice.innerHTML = planPrice;
+                modalPlanFeatures.innerHTML = planFeatures.map(feature => `<li>${feature}</li>`).join('');
+
+                modal.style.display = 'block';
+            });
+        });
+
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
